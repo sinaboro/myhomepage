@@ -1,0 +1,155 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>학생용_실습지</title><style>body{max-width:970px;margin:30px auto;padding:20px;font-family:system-ui,"Malgun Gothic",sans-serif;color:#172a43;line-height:1.8}h1,h2{color:#174f8c}h2{border-bottom:2px solid #cbdced;padding-bottom:8px;margin-top:45px}table{border-collapse:collapse;width:100%;font-size:.92em}td,th{border:1px solid #cbd5e1;padding:8px;vertical-align:top}th{background:#eaf1fa}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f5f9;padding:16px;border-radius:8px;font-size:.92em}code{font-family:Consolas,monospace}li{margin:5px 0}@media print{body{font-size:10.5pt;margin:0}h2{break-before:page}h3{break-after:avoid}pre,table{break-inside:avoid}a{color:inherit}}</style><h1>10/12 실행 결과 기록지</h1>
+<p>이름: <strong><em>_</em>_ 날짜: </strong><strong><em>_ 작성 코드: </em></strong>___</p>
+<h2>실행 결과 확인하기 — 직접 만든 프로그램을 다시 실행해 보세요</h2>
+<h3>이 표는 무엇을 하는 활동인가요?</h3>
+<p><strong>내 프로그램에 여러 입력을 넣어 계산과 조건이 맞는지 확인하는 기록지입니다.</strong> 시험 문제가 아니며 자동으로 실행되는 표도 아닙니다. 표의 한 행은 ‘프로그램을 한 번 실행할 때 넣을 값’입니다.</p>
+<ul>
+<li><strong>기대 결과:</strong> 계산·입력 규칙에 따라 나와야 하는 정답입니다. 실행 전에 읽습니다.</li>
+<li><strong>실제 결과:</strong> 내 프로그램 화면에 나온 결제액 또는 안내 문구입니다. 직접 적습니다.</li>
+<li><strong>일치 여부:</strong> 기대 결과와 같으면 ✓, 다르면 ✗를 적습니다.
+HTML 표는 읽는 자료입니다. 기록은 학생용_실습지.md를 복사해 수정하거나 인쇄한 실습지·노트에 적습니다.</li>
+</ul>
+<h3>기본 미션: T1을 함께 해보기</h3>
+<ol>
+<li>내 코드 <code>예제/my_receipt.py</code>를 저장합니다.</li>
+<li>터미널에서 <code>python 예제/my_receipt.py</code>를 실행합니다.</li>
+<li>상품명에 텀블러, 단가에12000, 수량에3, 할인율에10을 <strong>질문 순서대로 한 개씩 입력하고 Enter</strong> 합니다.</li>
+<li>화면의 결제액을 읽습니다. 32400원이면 ‘실제 결과’에32400원, ‘일치 여부’에✓를 씁니다.</li>
+<li>다른 결과면 할인 전36000원·할인액3600원부터 확인하고 코드를 수정합니다. 저장하고 같은 T1 입력으로 다시 실행합니다.</li>
+<li>T1이 맞으면 <strong>프로그램을 다시 실행</strong>하여 T2의 값을 입력합니다. 프로그램 안에서6개 행을 한꺼번에 처리할 필요는 없습니다. 반복문을 작성하지 않아도 됩니다.</li>
+</ol>
+<h4>작성 예시 — 기록 방법만 보여 주는 행</h4>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>넣은 값</th>
+<th>기대 결과</th>
+<th>실제 결과</th>
+<th>일치 여부</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 예시</td>
+<td>텀블러 / 12000 / 3 / 10</td>
+<td>32400원</td>
+<td>32400원</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>이 예시를 보고 아래 빈칸에는 <strong>자신이 실제로 실행한 결과</strong>를 기록합니다.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>기본 미션 확인표 — my_receipt.py에서6번 실행</h3>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>상품명</th>
+<th style="text-align: right;">단가</th>
+<th style="text-align: right;">수량</th>
+<th style="text-align: right;">할인율</th>
+<th>기대 결과</th>
+<th>실제 결과</th>
+<th>일치 여부</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>텀블러</td>
+<td style="text-align: right;">12000</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td>결제32400원</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T2</td>
+<td>노트</td>
+<td style="text-align: right;">2500</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12.5</td>
+<td>결제8750원</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T3</td>
+<td>텀블러</td>
+<td style="text-align: right;">12000</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td>결제36000원</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T4</td>
+<td>텀블러</td>
+<td style="text-align: right;">12000</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">100</td>
+<td>결제0원</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T5</td>
+<td>텀블러</td>
+<td style="text-align: right;">12000</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+<td>범위 오류 안내, 결제액 없음</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T6</td>
+<td>텀블러</td>
+<td style="text-align: right;">12000</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">101</td>
+<td>범위 오류 안내, 결제액 없음</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T5·T6은 ‘범위 오류 안내가 나오고 결제액이 출력되지 않음’이 기대 결과입니다. 문구는 달라도 뜻이 같으면 ✓입니다. 이 두 행에서 오류 안내가 나오는 것이 프로그램의 올바른 동작입니다.</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>심화 미션 확인표 — my_order.py에서4번 실행</h3>
+<p>각 상품의 이름은 A와B로 입력합니다. ‘단가/수량/할인율’의 세 값을 각각 입력합니다.
+|번호|상품1 단가/수량/할인율|상품2 단가/수량/할인율|기대 결과|실제 결과|일치 여부|
+|---|---|---|---|---|---|
+|S1|12000 / 3 / 10|2500 / 4 / 12.5|합계41150, 배송0, 최종41150원|||
+|S2|10000 / 1 / 0|10000 / 1 / 0|합계20000, 배송3000, 최종23000원|||
+|S3|15000 / 1 / 0|15000 / 1 / 0|합계30000, 배송0, 최종30000원|||
+|S4|1000 / 0 / 0|1000 / 1 / 0|범위 오류 안내, 최종 결제액 출력 없음|||
+기본 경로를 선택한 학생은 T1~T6을 기록합니다. 심화 경로는 먼저 기본 동작을 확인한 뒤 S1~S4도 기록합니다.</p>
+<h3>결과가 다르면 무엇을 하나요?</h3>
+<p>숫자가 다르면 단가·수량→할인 전 금액→할인액→결제액 순서로 확인합니다. 배송만 다르면 &gt;=30000 조건을 확인합니다. 범위 오류에도 결제액이 나오면 계산·출력 줄이 유효한 경우에만 실행되는지 확인합니다. 수정 후 실패했던 입력을 다시 넣고 결과를 기록합니다.</p>
+<h3>제출</h3>
+<p>자기 코드 파일, 작성한 결과 확인표, 직접 수정한 두 줄과 설명을 제출합니다. 예제나 정답을 그대로 실행한 기록만 제출하지 않습니다.</p>
+<h2>코드 설명</h2>
+<p>입력 줄과 역할:
+형 변환 줄과 역할:
+조건 줄과 역할:
+계산 줄과 역할:
+출력 줄과 역할:
+직접 수정한 두 줄과 이유:</p></html>
