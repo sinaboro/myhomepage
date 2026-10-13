@@ -125,6 +125,23 @@
   .c-py { background: linear-gradient(160deg, #3776ab, #ffd43b); }
   .c-data { background: linear-gradient(160deg, #00897b, #004d40); }
 
+  /* ===== 저서 (YES24) ===== */
+  .shelf-wrap { background: var(--bg-soft); border-radius: 18px; padding: 32px 28px; }
+  .author-intro { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 28px; font-size: 14px; color: #444; }
+  .author-intro .badge { flex-shrink: 0; background: #e8f0ff; color: var(--brand); font-weight: 900; font-size: 12px; padding: 4px 10px; border-radius: 6px; }
+  .shelf { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px 24px; }
+  .pub { display: flex; flex-direction: column; }
+  .pub .img { position: relative; aspect-ratio: 3/4.2; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 12px; }
+  .pub img { max-width: 100%; max-height: 100%; box-shadow: 0 8px 18px rgba(0,0,0,.2); border-radius: 2px 6px 6px 2px; transition: transform .25s; background: #fff; }
+  .pub:hover img { transform: translateY(-6px); }
+  .pub .new { position: absolute; top: 0; left: 0; background: var(--accent); color: #fff; font-size: 11px; font-weight: 900; padding: 3px 8px; border-radius: 4px; z-index: 1; }
+  .pub h4 { font-size: 15px; line-height: 1.35; margin-bottom: 4px; word-break: keep-all; }
+  .pub:hover h4 { color: var(--brand); text-decoration: underline; }
+  .pub .au { font-size: 12px; color: var(--muted); }
+  .pub .pr { font-size: 14px; font-weight: 700; margin-top: 4px; }
+  .pub .pr small { font-weight: 400; color: var(--muted); font-size: 12px; margin-left: 4px; }
+  .yes-btn { display: inline-block; background: #2b7de9; color: #fff !important; padding: 11px 26px; border-radius: 24px; font-size: 14px; font-weight: 700; }
+
   /* ===== 커리큘럼 로드맵 ===== */
   .roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .step { background: var(--bg-soft); border-radius: 14px; padding: 22px; position: relative; }
@@ -174,6 +191,7 @@
   @media (max-width: 960px) {
     .hero { grid-template-columns: 1fr; }
     .roadmap { grid-template-columns: 1fr 1fr; }
+    .shelf { grid-template-columns: repeat(3, 1fr); }
     .academy { grid-template-columns: 1fr; }
     .header-links { display: none; }
   }
@@ -188,6 +206,9 @@
     .dots { left: 28px; }
     .roadmap, .two { grid-template-columns: 1fr; }
     .books { grid-template-columns: repeat(2, 1fr); gap: 24px 14px; }
+    .shelf { grid-template-columns: repeat(2, 1fr); gap: 24px 14px; }
+    .shelf-wrap { padding: 20px 16px; }
+    .author-intro { flex-direction: column; gap: 8px; }
     .academy { padding: 24px; }
     .util .wrap { justify-content: center; }
   }
@@ -199,6 +220,7 @@
 <div class="util">
   <div class="wrap">
     <a href="https://github.com/sinaboro" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.yes24.com/product/search?domain=ALL&query=%EA%B9%80%EB%8C%80%EC%B2%A0&authorNo=481513&author=%EA%B9%80%EB%8C%80%EC%B2%A0" target="_blank" rel="noopener">YES24 저자 페이지</a>
     <a href="https://ch.mbccomputer.co.kr/front/home" target="_blank" rel="noopener">MBC아카데미 천호점</a>
     <a href="tel:024790654">상담 02-479-0654</a>
   </div>
@@ -213,6 +235,7 @@
       <button type="submit">검색</button>
     </form>
     <div class="header-links">
+      <a href="#books-sec"><span>📖</span>저서</a>
       <a href="#courses"><span>📚</span>강의실</a>
       <a href="#about"><span>👨‍🏫</span>강사소개</a>
       <a href="#academy"><span>🏫</span>수강안내</a>
@@ -220,7 +243,8 @@
   </div>
   <nav class="gnb">
     <div class="wrap">
-      <a href="#courses" class="on">베스트 강의</a>
+      <a href="#books-sec" class="on">저서</a>
+      <a href="#courses">베스트 강의</a>
       <a href="#courses" data-filter="backend">백엔드</a>
       <a href="#courses" data-filter="frontend">프론트엔드</a>
       <a href="#courses" data-filter="devops">DevOps·클라우드</a>
@@ -242,6 +266,13 @@
         <p>HTML/CSS/JS 기초부터 배포까지, 실무형 프로젝트로 배웁니다.</p>
         <a class="btn" href="https://ch.mbccomputer.co.kr/front/home" target="_blank" rel="noopener">과정 상담 바로가기 →</a>
         <div class="deco">{ }</div>
+      </div>
+      <div class="slide s1" style="background:linear-gradient(120deg,#2b7de9,#00b4a0)">
+        <span class="tag">📖 신간 · YES24 판매중</span>
+        <h2>AI 기반 금융 시스템<br>개발 실무 VOL1</h2>
+        <p>Spring Boot 3 · Java 21 · Python 3 — 김기태 · 김대철 · 김재우 공저</p>
+        <a class="btn" href="https://www.yes24.com/product/goods/192978134" target="_blank" rel="noopener">YES24에서 보기 →</a>
+        <div class="deco">📘</div>
       </div>
       <div class="slide s2">
         <span class="tag">☁️ DevOps · Cloud</span>
@@ -274,6 +305,7 @@
       <div class="stats">
         <div><b>11년</b><span>실무 경력</span></div>
         <div><b>17년</b><span>강의 경력</span></div>
+        <div><b>8권</b><span>IT 저서</span></div>
       </div>
       <div class="motto">"백견불여일타, 개념정립 후 무한반복"</div>
       <div class="links">
@@ -282,6 +314,24 @@
       </div>
     </aside>
   </div>
+
+  <!-- 저서 -->
+  <section class="wrap" id="books-sec">
+    <div class="sec-head">
+      <h2>김대철 <em>저서</em></h2>
+      <a class="more" href="https://www.yes24.com/product/search?domain=ALL&query=%EA%B9%80%EB%8C%80%EC%B2%A0&authorNo=481513&author=%EA%B9%80%EB%8C%80%EC%B2%A0" target="_blank" rel="noopener">YES24 저자 페이지 더보기 →</a>
+    </div>
+    <div class="shelf-wrap">
+      <div class="author-intro">
+        <span class="badge">저자 소개</span>
+        <p>전자계산을 전공하고 개발자로서 세븐일레븐, 애경백화점, 하나은행 등의 프로젝트 개발에 참여했습니다. 더조은컴퓨터아카데미, 이젠컴퓨터학원, MBC아카데미컴퓨터학원 등에서 오랫동안 강의했으며, 현재 자바 풀스택 개발자·인공지능 서비스 개발자·클라우드 서비스 개발자 직종의 K-디지털 직업훈련 과정을 강의하며 컴퓨터 공학을 연구하고 있습니다.</p>
+      </div>
+      <div class="shelf" id="shelf"></div>
+      <div style="text-align:center;margin-top:30px">
+        <a class="yes-btn" href="https://www.yes24.com/product/search?domain=ALL&query=%EA%B9%80%EB%8C%80%EC%B2%A0&authorNo=481513&author=%EA%B9%80%EB%8C%80%EC%B2%A0" target="_blank" rel="noopener">YES24에서 전체 저서 보기</a>
+      </div>
+    </div>
+  </section>
 
   <!-- 베스트 강의 -->
   <section class="wrap" id="courses">
@@ -340,6 +390,7 @@
           <li>이젠컴퓨터아카데미<small>강사</small></li>
           <li>더조은아트 컴퓨터학원<small>강사</small></li>
           <li>글로벌능력개발원</li>
+          <li>세븐일레븐 · 애경백화점 · 하나은행<small>프로젝트 개발 참여</small></li>
           <li>㈜하늘정보</li>
           <li>㈜소넷그룹</li>
         </ul>
@@ -427,6 +478,25 @@
     { repo: 'fruit', title: 'React 과일가게 배포', sub: 'React 쇼핑몰 만들고 배포하기', cat: 'frontend', label: 'PROJECT', icon: '🍎', cls: 'c-web', chips: ['React', '배포'] },
     { repo: 'github-actions-workflow', title: 'GitHub Actions 워크플로우', sub: '워크플로우 문법 실습', cat: 'devops', label: 'DEVOPS', icon: '⚙️', cls: 'c-ops', chips: ['GitHub Actions'] },
   ];
+
+  // ===== 저서 (YES24) =====
+  const pubs = [
+    { id: 192978134, title: 'AI 기반 금융 시스템 개발 실무 VOL1', au: '김기태, 김대철, 김재우 · BOOKK', date: '2026.06', price: '29,000원', isNew: true },
+    { id: 190271898, title: 'AI 머신러닝 풀 스택 웹 서비스 개발 VOL4', au: '김기태, 유순복, 김대철 · BOOKK', date: '2026.05', price: '29,300원', isNew: true },
+    { id: 189439482, title: 'AI 머신러닝 풀 스택 웹 서비스 개발 VOL1', au: '김기태, 김대철, 함창훈, 유순복 · BOOKK', date: '2026.05', price: '30,600원' },
+    { id: 186675417, title: 'HTML5+CSS3+Javascript 완전정복', au: '김기태, 유순복, 김대철 · BOOKK', date: '2026.04', price: '32,100원' },
+    { id: 160463255, title: '한권으로 끝내는 Java 21 프로그래밍', au: '김기태, 김대철, 함창훈 · BOOKK', date: '2025.10', price: '27,600원' },
+    { id: 155292950, title: '리액트로 끝내는 실무 웹앱 개발', au: '김기태, 유순복, 김대철 · BOOKK', date: '2025.09', price: '34,900원' },
+    { id: 143640539, title: '머신러닝/딥러닝을 위한 파이썬 AI 풀스택 입문', au: '김기태, 김대철, 함창훈, 유순복 · BOOKK', date: '2025.03', price: '32,600원' },
+    { id: 140838759, title: 'Vue 3 풀스택 실전 웹 프로젝트', au: '김기태, 김대철 · 남가람북스', date: '2025.01', price: '34,200원' },
+  ];
+  document.getElementById('shelf').innerHTML = pubs.map(p => `
+    <a class="pub" href="https://www.yes24.com/product/goods/${p.id}" target="_blank" rel="noopener">
+      <div class="img">${p.isNew ? '<span class="new">NEW</span>' : ''}<img src="https://image.yes24.com/goods/${p.id}/XL" alt="${p.title} 표지" loading="lazy"></div>
+      <h4>${p.title}</h4>
+      <div class="au">${p.au} · ${p.date}</div>
+      <div class="pr">${p.price}<small>YES24</small></div>
+    </a>`).join('');
 
   const booksEl = document.getElementById('books');
   booksEl.innerHTML = courses.map((c, i) => `
